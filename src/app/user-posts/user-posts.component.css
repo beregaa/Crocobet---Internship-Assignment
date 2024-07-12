@@ -1,0 +1,12 @@
+.postCard {
+  width: 300px;
+  height: 500px;
+  background-color: black;
+  color: white;
+}
+.postWapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
