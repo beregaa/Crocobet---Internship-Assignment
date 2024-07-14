@@ -1,0 +1,14 @@
+<div class="headerWrapper">
+  <div class="headerContent">
+    <div class="navigation">
+      <div [routerLink]="['/']">Crocobet</div>
+      <div [routerLink]="['/users']">users</div>
+      <div [routerLink]="['/posts']">posts</div>
+    </div>
+
+    <div class="date">
+      <img src="assets/calendarActive.svg" alt="Calendar Icon">
+      {{ formattedDate }}
+    </div>
+  </div>
+</div>

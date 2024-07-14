@@ -1,0 +1,29 @@
+.green {
+  color: green;
+  padding: 4px;
+  border: 2px solid green;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.default {
+  text-align: center;
+  font-weight: 900;
+}
+
+.wrapper {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+.mainWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+

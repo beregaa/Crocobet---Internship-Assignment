@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { PostsComponent } from './posts/posts.component';
-import { UsersComponent } from './users/users.component';
-import { UserPostsComponent } from './user-posts/user-posts.component';
+import { PostsComponent } from './components/posts/posts.component';
+import { UsersComponent } from './components/users/users.component';
+import { UserPostsComponent } from './components/user-posts/user-posts.component';
+import { UserTodosComponent } from './components/user-todos/user-todos.component';
 
 export const routes: Routes = [
   {
@@ -18,6 +19,11 @@ export const routes: Routes = [
   {
     path: 'posts/:id',
     component: UserPostsComponent,
-    title: 'single post',
+    title: 'user post',
+  },
+  {
+    path: 'todos/:id',
+    component: UserTodosComponent,
+    title: 'user todos',
   },
 ];

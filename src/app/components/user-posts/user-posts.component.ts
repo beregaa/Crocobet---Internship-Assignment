@@ -3,6 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, NgModule, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { PostInterface } from '../../interfaces/post.interface';
 
 @Component({
   selector: 'app-user-posts',
@@ -13,7 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserPostsComponent implements OnInit {
   constructor(private httpClient: HttpClient, private route: ActivatedRoute) {}
-  data: any = [];
+  data: PostInterface[] = [];
 
   ngOnInit(): void {
     this.fetchData();
@@ -21,17 +22,13 @@ export class UserPostsComponent implements OnInit {
 
   fetchData() {
     const userId = this.route.snapshot.paramMap.get('id');
-  
+
     this.httpClient
-      .get(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
+      .get<PostInterface[]>(
+        `https://jsonplaceholder.typicode.com/posts?userId=${userId}`
+      )
       .subscribe((data) => {
         this.data = data;
-        console.log(this.data);
       });
-
-    
   }
-
-
-  
 }
